@@ -1,0 +1,3 @@
+cisco_ios:192.168.122.30:admin:cisco
+arista_eos:192.168.122.10:admin:arista
+arista_eos:192.168.122.20:admin:arista

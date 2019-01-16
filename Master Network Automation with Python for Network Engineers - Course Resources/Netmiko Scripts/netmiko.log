@@ -1,0 +1,341 @@
+DEBUG:paramiko.transport:starting thread (client mode): 0x8538c940
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.4.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.6p1 Ubuntu-4
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.6p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: ecdh-sha2-nistp256
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for [192.168.0.16]:2299: b'dffa4ac5d7fec9f18cb6ca4a2782d666'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-36-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Oct 19 18:17:27 UTC 2018
+
+  System load:  0.0                Processes:             101
+  Usage of /:   32.8% of 14.70GB   Users logged in:       1
+  Memory usage: 9%                 IP address for enp0s3: 192.168.0.16
+  Swap usage:   0%
+
+ * Security certifications for Ubuntu!
+   We now have FIPS, STIG, CC and a CIS Benchmark.
+
+   - http://bit.ly/Security_Certification
+
+ * Want to make a highly secure kiosk, smart display or touchscreen?
+   Here's a step-by-step tutorial for a rainy weekend, or a startup.
+
+   - https://bit.ly/secure-kiosk
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+79 packages can be updated.
+1 update is a security update.
+
+
+Last login: Fri Oct 19 18:16:57 2018 from 192.168.0.15
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nu2@ubuntu-server-18_04:~$ '
+DEBUG:netmiko:new_output = 
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:repr = '\r\nu2@ubuntu-server-18_04:~$ '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: u2@ubuntu\-server\-18_04:\~
+DEBUG:netmiko:_read_channel_expect read_data: 
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:Pattern found: u2@ubuntu\-server\-18_04:\~ 
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:write_channel: b'sudo su\n'
+DEBUG:netmiko:read_channel: sudo su
+[sudo] password for u2: 
+DEBUG:netmiko:write_channel: b'1234\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+[01;31mroot@ubuntu-server-18_04[01;34m /home/u2 $[00m
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\n\x1b[01;31mroot@ubuntu-server-18_04\x1b[01;34m /home/u2 $\x1b[00m'
+DEBUG:netmiko:new_output = 
+root@ubuntu-server-18_04 /home/u2 $
+DEBUG:netmiko:repr = '\r\nroot@ubuntu-server-18_04 /home/u2 $'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: root@ubuntu\-server\-18_04\ /home/u2\ 
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: [01;31mroot@ubuntu-server-18_04[01;34m /home/u2 $[00m
+DEBUG:paramiko.transport:starting thread (client mode): 0xa3578898
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.4.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.6p1 Ubuntu-4
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.6p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: ecdh-sha2-nistp256
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for [192.168.0.16]:2299: b'dffa4ac5d7fec9f18cb6ca4a2782d666'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-36-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Oct 19 19:06:26 UTC 2018
+
+  System load:  0.07               Processes:             103
+  Usage of /:   32.8% of 14.70GB   Users logged in:       1
+  Memory usage: 9%                 IP address for enp0s3: 192.168.0.16
+  Swap usage:   0%
+
+ * Security certifications for Ubuntu!
+   We now have FIPS, STIG, CC and a CIS Benchmark.
+
+   - http://bit.ly/Security_Certification
+
+ * Want to make a highly secure kiosk, smart display or touchscreen?
+   Here's a step-by-step tutorial for a rainy weekend, or a startup.
+
+   - https://bit.ly/secure-kiosk
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+79 packages can be updated.
+1 update is a security update.
+
+
+Last login: Fri Oct 19 18:17:28 2018 from 192.168.0.15
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nu2@ubuntu-server-18_04:~$ '
+DEBUG:netmiko:new_output = 
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:repr = '\r\nu2@ubuntu-server-18_04:~$ '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: u2@ubuntu\-server\-18_04:\~
+DEBUG:netmiko:_read_channel_expect read_data: 
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:Pattern found: u2@ubuntu\-server\-18_04:\~ 
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:write_channel: b'sudo su\n'
+DEBUG:netmiko:read_channel: sudo su
+[sudo] password for u2: 
+DEBUG:netmiko:write_channel: b'1234\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\n[root@ubuntu-server-18_04 /home/u2]#'
+DEBUG:netmiko:new_output = 
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:repr = '\r\n[root@ubuntu-server-18_04 /home/u2]#'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: \[root@ubuntu\-server\-18_04\ /home/u2\]
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: [root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:Pattern found: \[root@ubuntu\-server\-18_04\ /home/u2\] 
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\n[root@ubuntu-server-18_04 /home/u2]#'
+DEBUG:netmiko:new_output = 
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:repr = '\r\n[root@ubuntu-server-18_04 /home/u2]#'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ls -l /root/a.txt\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ls -l /root/a.txt
+ls: cannot access '/root/a.txt': No such file or directory
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "ls -l /root/a.txt\r\nls: cannot access '/root/a.txt': No such file or directory\r\n[root@ubuntu-server-18_04 /home/u2]#"
+DEBUG:netmiko:new_output = ls -l /root/a.txt
+ls: cannot access '/root/a.txt': No such file or directory
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:repr = "ls -l /root/a.txt\r\nls: cannot access '/root/a.txt': No such file or directory\r\n[root@ubuntu-server-18_04 /home/u2]#"
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "ls -l /root/a.txt\r\nls: cannot access '/root/a.txt': No such file or directory\r\n[root@ubuntu-server-18_04 /home/u2]#"
+DEBUG:netmiko:new_output = ls -l /root/a.txt
+ls: cannot access '/root/a.txt': No such file or directory
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:repr = "ls -l /root/a.txt\r\nls: cannot access '/root/a.txt': No such file or directory\r\n[root@ubuntu-server-18_04 /home/u2]#"
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:starting thread (client mode): 0xc826b898
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.4.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.6p1 Ubuntu-4
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.6p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: ecdh-sha2-nistp256
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for [192.168.0.16]:2299: b'dffa4ac5d7fec9f18cb6ca4a2782d666'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-36-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Oct 19 19:06:59 UTC 2018
+
+  System load:  0.04               Processes:             104
+  Usage of /:   32.8% of 14.70GB   Users logged in:       1
+  Memory usage: 9%                 IP address for enp0s3: 192.168.0.16
+  Swap usage:   0%
+
+ * Security certifications for Ubuntu!
+   We now have FIPS, STIG, CC and a CIS Benchmark.
+
+   - http://bit.ly/Security_Certification
+
+ * Want to make a highly secure kiosk, smart display or touchscreen?
+   Here's a step-by-step tutorial for a rainy weekend, or a startup.
+
+   - https://bit.ly/secure-kiosk
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+79 packages can be updated.
+1 update is a security update.
+
+
+Last login: Fri Oct 19 19:06:27 2018 from 192.168.0.15
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nu2@ubuntu-server-18_04:~$ '
+DEBUG:netmiko:new_output = 
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:repr = '\r\nu2@ubuntu-server-18_04:~$ '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: u2@ubuntu\-server\-18_04:\~
+DEBUG:netmiko:_read_channel_expect read_data: 
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:Pattern found: u2@ubuntu\-server\-18_04:\~ 
+u2@ubuntu-server-18_04:~$ 
+DEBUG:netmiko:write_channel: b'sudo su\n'
+DEBUG:netmiko:read_channel: sudo su
+[sudo] password for u2: 
+DEBUG:netmiko:write_channel: b'1234\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\n[root@ubuntu-server-18_04 /home/u2]#'
+DEBUG:netmiko:new_output = 
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:repr = '\r\n[root@ubuntu-server-18_04 /home/u2]#'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: \[root@ubuntu\-server\-18_04\ /home/u2\]
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: [root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:Pattern found: \[root@ubuntu\-server\-18_04\ /home/u2\] 
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\n[root@ubuntu-server-18_04 /home/u2]#'
+DEBUG:netmiko:new_output = 
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:repr = '\r\n[root@ubuntu-server-18_04 /home/u2]#'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ls -l /etc/ > /root/a.txt\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ls -l /etc/ > /root/a.txt
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l /etc/ > /root/a.txt\r\n[root@ubuntu-server-18_04 /home/u2]#'
+DEBUG:netmiko:new_output = ls -l /etc/ > /root/a.txt
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:repr = 'ls -l /etc/ > /root/a.txt\r\n[root@ubuntu-server-18_04 /home/u2]#'
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l /etc/ > /root/a.txt\r\n[root@ubuntu-server-18_04 /home/u2]#'
+DEBUG:netmiko:new_output = ls -l /etc/ > /root/a.txt
+[root@ubuntu-server-18_04 /home/u2]#
+DEBUG:netmiko:repr = 'ls -l /etc/ > /root/a.txt\r\n[root@ubuntu-server-18_04 /home/u2]#'
+DEBUG:netmiko:write_channel: b'exit\n'
